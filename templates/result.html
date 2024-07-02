@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ashim Nepal | Diabetes Prediction Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logoNewNobg.png') }}">
+</head>
+<body>
+    <h1>Diabetes Prediction Result</h1>
+    {% if prediction %}
+        Based on the provided information, you <b>have been predicted to have diabetes</b>. Here are some important suggestions to help you manage your health effectively:
+        <br>
+        <br>
+        <a href="/">Make another prediction</a>
+        <br><br>
+        <div class="container">
+            <h2><b>Diabetes Management Suggestions</b></h2>
+
+         <h4>Diet</h4>
+        <ul>
+            <li><b>Eat Balanced Meals:</b> Focus on vegetables, lean proteins, and whole grains.</li>
+            <li><b>Avoid Sugary Foods:</b> Reduce intake of sweets and sugary drinks.</li>
+        </ul>
+
+        <h4>Exercise</h4>
+        <ul>
+            <li><b>Stay Active:</b> Aim for at least 30 minutes of moderate exercise most days.</li>
+            <li><b>Check Levels:</b> Monitor blood sugar before and after exercising.</li>
+        </ul>
+
+        <h4>Medications</h4>
+        <ul>
+            <li><b>Take as Prescribed:</b> Ensure you take your medications on time.</li>
+            <li><b>Keep a Log:</b> Track your medication intake and any side effects.</li>
+        </ul>
+
+        <h4>Monitoring</h4>
+        <ul>
+            <li><b>Check Blood Sugar:</b> Regularly monitor your blood glucose levels.</li>
+            <li><b>Record Readings:</b> Keep a log of your blood sugar levels to share with your doctor.</li>
+        </ul>
+
+        <h4>Lifestyle</h4>
+        <ul>
+            <li><b>Stay Hydrated:</b> Drink plenty of water throughout the day.</li>
+            <li><b>Get Rest:</b> Ensure you get 7-9 hours of sleep each night.</li>
+            <li><b>Manage Stress:</b> Practice relaxation techniques like deep breathing or meditation.</li>
+        </ul>
+
+        <h4>Preparation for Doctor's Appointment</h4>
+        <ul>
+            <li><b>Bring Records:</b> Take your blood sugar log, medication list, and any questions.</li>
+            <li><b>Note Symptoms:</b> Write down any new symptoms or concerns to discuss.</li>
+        </ul>
+    </div>
+    {% elif error %}
+        Sorry Encountered some Error(Please Ensure proper Inputs else there have been some problem in the application we shall look on): {{ error }}
+    {% else %}
+        You have been predicted to <b>not have diabetes</b>. To maintain your good health and reduce the risk of developing diabetes in the future, here are some helpful tips:
+        <br>
+        <br>
+        <a href="/">Make another prediction</a>
+        <br><br>
+        <div class="container">
+            <h2><b>Congratulations! Stay Healthy</b></h2>
+
+        <h4>Diet</h4>
+        <ul>
+            <li><b>Eat Balanced Meals:</b> Include a variety of vegetables, fruits, lean proteins, and whole grains in your diet.</li>
+            <li><b>Limit Sugary Foods:</b> Reduce intake of sweets and sugary beverages.</li>
+        </ul>
+
+        <h4>Exercise</h4>
+        <ul>
+            <li><b>Stay Active:</b> Aim for at least 30 minutes of moderate exercise most days of the week.</li>
+            <li><b>Incorporate Variety:</b> Include different types of exercises like cardio, strength training, and flexibility exercises.</li>
+        </ul>
+
+        <h4>Hydration</h4>
+        <ul>
+            <li><b>Drink Plenty of Water:</b> Stay hydrated by drinking sufficient water throughout the day.</li>
+        </ul>
+
+        <h4>Lifestyle</h4>
+        <ul>
+            <li><b>Get Enough Sleep:</b> Aim for 7-9 hours of quality sleep each night.</li>
+            <li><b>Manage Stress:</b> Practice relaxation techniques such as deep breathing, meditation, or yoga.</li>
+            <li><b>Avoid Smoking:</b> If you smoke, seek help to quit. Avoid exposure to secondhand smoke.</li>
+        </ul>
+
+        <h4>Regular Check-ups</h4>
+        <ul>
+            <li><b>Visit Your Doctor:</b> Schedule regular health check-ups to monitor your overall health.</li>
+            <li><b>Screenings:</b> Participate in routine screenings for blood pressure, cholesterol, and blood sugar levels.</li>
+        </ul>
+    </div>
+    {% endif %}
+ <br>
+    Please Note that this is a simple primary Gradient Boosting Classifier model and might make some error in prediction.
+    <br>
+    <br>
+    <br>
+    <hr>
+    <p>Classification Prediction Model Application<br><br>KRB-02 by <b><a href="https://ashimnepal.com.np" target="_blank">Ashim Nepal</a></b>, 07-2024</p>
+</body>
+</html>
